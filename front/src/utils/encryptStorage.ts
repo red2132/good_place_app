@@ -13,8 +13,9 @@ const getEncryptStorage = async (key: string) => {
 
 /** 토큰 제거 함수 */
 const removeEncryptStorage = async (key: string) => {
-  const storedData = await EncryptedStorage.getItem(key);
-  if (storedData) {
+  const data = await getEncryptStorage(key);
+
+  if (data) {
     await EncryptedStorage.removeItem(key);
   }
 };

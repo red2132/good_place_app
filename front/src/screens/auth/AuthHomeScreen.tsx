@@ -1,9 +1,9 @@
 import React from 'react';
 import {StackScreenProps} from '@react-navigation/stack';
 import {Dimensions, Image, SafeAreaView, StyleSheet, View} from 'react-native';
-import {authNavigations} from '../../constants/navigations';
-import {AuthStackParamList} from '../../navigations/stack/AuthStackNavigator';
-import CustomButton from '../../components/CustomButton';
+import {authNavigations} from '@/constants/navigations';
+import {AuthStackParamList} from '@/navigations/stack/AuthStackNavigator';
+import CustomButton from '@/components/CustomButton';
 
 type AuthHomeScreenProps = StackScreenProps<
   AuthStackParamList,
@@ -16,7 +16,7 @@ function AuthHomeScreen({navigation}: AuthHomeScreenProps) {
       <View style={styles.imageContainer}>
         <Image
           resizeMode="contain"
-          source={require('../../assets/matzip.png')}
+          source={require('@/assets/matzip.png')}
           style={styles.image}
         />
       </View>
