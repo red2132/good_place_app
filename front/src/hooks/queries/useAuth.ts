@@ -30,6 +30,7 @@ function useLogin(mutationOptions?: UseMutationCustomOptions) {
     onSuccess: ({accessToken, refreshToken}) => {
       // 토큰을 스토리지에 저장
       setEncryptStorage(storageKeys.REFRESH_TOKEN, refreshToken);
+
       // 헤더에 엑세스 토큰 저장
       setHeader('Authorization', `Bearer ${accessToken}`);
     },
